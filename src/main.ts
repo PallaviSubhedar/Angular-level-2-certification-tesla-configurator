@@ -1,15 +1,15 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { http, HttpResponse } from 'msw';
 import { setupWorker } from 'msw/browser';
-import {http, HttpResponse} from 'msw';
+import { AppComponent } from './app/app.component';
+import { appConfig } from './app/app.config';
 
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
 
 
 const handlers = [
-  http.get('/options/:id', ({ params }) => {
+  http.get('/Options/:id', ({ params }) => {
 
     const options = {
       "S": {
@@ -114,5 +114,5 @@ const handlers = [
   }),
 ];
 export const worker = setupWorker(...handlers);
-worker.start();
+worker.start({quiet: true});
 
