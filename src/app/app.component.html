@@ -1,7 +1,7 @@
  <div class="inline">
-  <button (click)="getstep1()">Step1</button>
-  <button (click)="getstep2()" [disabled]="!secondButtonEnabled">Step2</button>
-  <button (click)="getstep3()" [disabled]="!thirdButtonEnabled">Step3</button>
+  <button id="Step1" (click)="getstep1()">Step1</button>
+  <button id ="Step2" (click)="getstep2()" [disabled]="!secondButtonEnabled">Step2</button>
+  <button id="Step3" (click)="getstep3()" [disabled]="!thirdButtonEnabled">Step3</button>
 </div>
 <app-viewcarmodel></app-viewcarmodel> 
 <router-outlet></router-outlet>
