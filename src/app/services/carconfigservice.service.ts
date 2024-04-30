@@ -8,14 +8,13 @@ import { CarModelServiceService } from './car-model-service.service';
 export class CarconfigserviceService {
   configId = 0 ; 
   config : Config | null = null ;
-  
   towHitch = false;
   yoke = false;
-  modelCode$: any;
+  
 
   constructor(carmodelservice:CarModelServiceService) { 
     
-    carmodelservice.modelCode$.subscribe((_: any) => {
+    carmodelservice.modelCode$.subscribe( _  => {
       this.configId = 0;
       this.config = null ;
       this.towHitch = false;

@@ -20,6 +20,7 @@ export class TeslasumComponent {
   towHitch: boolean;
   yoke: boolean;
   
+  
 constructor(public carmodelservice:CarModelServiceService ,optionservice:CarconfigserviceService){
   this.modelDescription = carmodelservice.carModel.description;
   this.config = optionservice.config!;

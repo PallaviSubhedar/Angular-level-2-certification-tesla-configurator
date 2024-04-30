@@ -13,11 +13,7 @@ export class CarModelServiceService {
   carModels: Model[] = [];
   modelCode$ = new BehaviorSubject('');
   colorCode = '';
-  Model: any;
-  // colors: any;
-  
-
-
+ 
   constructor(public http: HttpClient) { 
 
   http.get<Model[]>('/models').subscribe(

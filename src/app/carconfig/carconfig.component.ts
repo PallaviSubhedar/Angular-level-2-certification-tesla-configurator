@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { Config } from '../interfaces/carconfig';
 import { Options } from '../interfaces/options';
+import { AlertService } from '../services/alert.service';
 import { CarModelServiceService } from '../services/car-model-service.service';
 import { CarconfigserviceService } from '../services/carconfigservice.service';
 
@@ -27,7 +28,7 @@ export class CarconfigComponent {
   
   
 
-  constructor( http:HttpClient,carmodelservice:CarModelServiceService,private optionservice:CarconfigserviceService){
+  constructor( http:HttpClient,carmodelservice:CarModelServiceService,private optionservice:CarconfigserviceService,private alertservice:AlertService){
     
     var url ='/Options/' +carmodelservice.modelCode$.value;
      
@@ -35,6 +36,7 @@ export class CarconfigComponent {
 
   }
   get config(): Config {
+    
     const config = this.options?.configs.find(
       config => config.id === this.configId
     );
@@ -46,12 +48,12 @@ export class CarconfigComponent {
 
  
   // ngModel writes the value as a string
-  set configId(id: string) {
-    this.optionservice.configId = parseInt(id);
+  set configId(id: number) {
+    this.optionservice.configId = parseInt(id.toString());
     this.optionservice.config = this.config;
   }
   
-  get configId(): any{
+  get configId(): number{
     return this.optionservice.configId;
   }
 
@@ -69,5 +71,9 @@ export class CarconfigComponent {
 
   set yoke(value: boolean) {
     this.optionservice.yoke = value;
+  }
+
+  onConfigChange(){
+    this.alertservice.showAlert('Please Select Tesla-Car-Config ');
   }
 }

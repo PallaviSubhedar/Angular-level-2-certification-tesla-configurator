@@ -2,7 +2,7 @@
 <div class="controls">
   <mat-form-field>
     <mat-label>Config</mat-label>
-    <mat-select id="configSelect" [(ngModel)]="configId" name="config">
+    <mat-select id="configSelect" [(ngModel)]="configId" name="config" (selectionChange)="onConfigChange()">
       <mat-option [value]="0">Choose...</mat-option>
       <ng-container *ngIf="options">
         <mat-option *ngFor="let config of options.configs" [value]="config.id">

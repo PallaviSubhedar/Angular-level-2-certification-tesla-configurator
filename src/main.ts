@@ -14,6 +14,7 @@ const handlers = [
     const options = {
       "S": {
         configs: [
+          {id: 0, description: "None", range: 0, speed: 0, price: 0},
           {id: 1, description: "Dual Motor All-Wheel Drive", range: 405, speed: 149, price: 74990},
           {id: 2, description: "Plaid - Tri Motor All-Wheel Drive", range: 396, speed: 200, price: 89990},
         ],
@@ -22,6 +23,7 @@ const handlers = [
       },
       "X": {
         configs: [
+          {id: 0, description: "None", range: 0, speed: 0, price: 0},
           {id: 1, description: "Dual Motor All-Wheel Drive", range: 348, speed: 149, price: 79990},
           {id: 2, description: "Plaid - Tri Motor All-Wheel Drive", range: 333, speed: 149, price: 94990},
         ],
@@ -30,6 +32,7 @@ const handlers = [
       },
       "C" : {
         configs: [
+          {id: 0, description: "None", range: 0, speed: 0, price: 0},
           {id: 1, description: "Rear Wheel Drive", range: 250, speed: 110, price: 60990},
           {id: 2, description: "Dual Motor All-Wheel Drive", range: 340, speed: 112, price: 79990},
           {id: 3, description: "Cyberbeast - Tri Motor All-Wheel Drive", range: 320, speed: 130, price: 99990},
@@ -39,6 +42,7 @@ const handlers = [
       },
       "3": {
         configs: [
+          {id: 0, description: "None", range: 0, speed: 0, price: 0},
           {id: 1, description: "Rear-Wheel Drive", range: 272, speed: 140, price: 38990},
           {id: 2, description: "Long Range - Dual Motor All-Wheel Drive", range: 333, speed: 145, price: 45990},
           {id: 3, description: "Performance - Dual Motor All-Wheel Drive", range: 315, speed: 162, price: 50990},
@@ -48,6 +52,7 @@ const handlers = [
       },
       "Y": {
         configs: [
+           {id: 0, description: "None", range: 0, speed: 0, price: 0},
           {id: 1, description: "Rear-Wheel Drive", range: 260, speed: 135, price: 43990},
           {id: 2, description: "Long Range - Dual Motor All-Wheel Drive", range: 330, speed: 135, price: 48990},
           {id: 3, description: "Performance - Dual Motor All-Wheel Drive", range: 303, speed: 155, price: 52490},

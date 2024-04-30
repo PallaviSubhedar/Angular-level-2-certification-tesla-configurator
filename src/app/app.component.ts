@@ -37,8 +37,7 @@ export class AppComponent {
 
   getstep2(){
     this.router.navigate(['/config-car']);
-    console.log('router selected')
-    
+    console.log('router selected') 
   }
 
   
@@ -49,7 +48,7 @@ export class AppComponent {
 
 
   ngOnInit() {
-    // Show alert without any event
+    // Show alert without  event
     this.alertservice.showAlert('Please Click on Step1 Button to enable Step2 and Step3');
   }
 }
